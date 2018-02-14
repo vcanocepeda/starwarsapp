@@ -5,8 +5,8 @@ import { PlanetService } from './planet.service';
 import { Planet } from './planet.class';
 import { PlanetResponse} from './planetResponse.class';
 
-// import {TableModule} from 'primeng/table';
-import {DataTableModule} from 'primeng/datatable';
+import {TableModule} from 'primeng/table';
+
 
 @Component({
   selector: 'app-planet',

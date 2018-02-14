@@ -15,6 +15,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'person',
+    loadChildren: './person/person.module#PersonModule'
+  },
+  {
     path: 'planet',
     loadChildren: './planet/planet.module#PlanetModule'
   },

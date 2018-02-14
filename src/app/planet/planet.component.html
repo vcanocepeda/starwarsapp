@@ -1,10 +1,4 @@
 
-<p-dataTable [value]="cars">
-    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
-</p-dataTable>
-
-<p>Otra</p>
-
 <div class="row">
   <div class="col-sm-4">
   </div>
@@ -15,38 +9,22 @@
   </div>
 </div>
 
-<div *ngIf="planets" style="text-align:center" >
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Planet</th>
-      <th>Rotation period</th>      
-      <th>Orbital period</th>
-      <th>Diameter</th>
-      <th>Climate</th>
-      <th>Gravity</th>
-      <th>Terrain</th>
-      <th>Surface water</th>
-      <th>Population</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let planet of planets">
-      <th>{{planet.name}}</th>    
-      <th>{{planet.rotation_period}}</th>
-      <th>{{planet.orbital_period}}</th>
-      <th>{{planet.diameter}}</th>
-      <th>{{planet.climate}}</th>
-      <th>{{planet.gravity}}</th>
-      <th>{{planet.terrain}}</th>
-      <th>{{planet.surface_water}}</th>
-      <th>{{planet.population}}</th>
-      <th>
-      <button type="button" class="btn btn-info">Edit</button>
-    </th>
-    </tr>
-  </tbody>
-  </table>
+<h3>Dynamic Columns</h3>
+<p-table [columns]="cols" [value]="planets">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                    {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
 
 
