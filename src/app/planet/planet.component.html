@@ -1,4 +1,10 @@
 
+<p-dataTable [value]="cars">
+    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+</p-dataTable>
+
+<p>Otra</p>
+
 <div class="row">
   <div class="col-sm-4">
   </div>
@@ -42,3 +48,5 @@
     </tr>
   </tbody>
   </table>
+
+

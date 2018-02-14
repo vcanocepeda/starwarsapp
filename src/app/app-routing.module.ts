@@ -11,12 +11,16 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: '404',
-    component: NotFoundComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'planet',
     loadChildren: './planet/planet.module#PlanetModule'
+  },
+  {
+    path: '404',
+    component: NotFoundComponent
   },
   {
     path: '**',
