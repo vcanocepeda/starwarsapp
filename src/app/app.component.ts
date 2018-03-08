@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     this.items = [
         {label: 'Home', icon: 'fa-bar-chart', routerLink: ['/home'] },
         {label: 'Person', icon: 'fa-bar-chart', routerLink: ['/person'] },
-        {label: 'Planets', icon: 'fa-calendar', routerLink: ['/planet']},
+        {label: 'Planets', icon: 'fa-calendar', routerLink: ['/planets']},
     ];
   }
 }

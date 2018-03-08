@@ -1,5 +1,3 @@
-<p>Otra</p>
-
 <div class="row">
   <div class="col-sm-4">
   </div>
@@ -14,29 +12,29 @@
   <table class="table table-hover">
   <thead>
     <tr>
-      <th>Planet</th>
-      <th>Rotation period</th>      
-      <th>Orbital period</th>
-      <th>Diameter</th>
-      <th>Climate</th>
-      <th>Gravity</th>
-      <th>Terrain</th>
-      <th>Surface water</th>
-      <th>Population</th>
+      <th>Person</th>
+      <th>Height</th>      
+      <th>Mass</th>
+      <th>Hair color</th>
+      <th>Skin coloor</th>
+      <th>Eye color</th>
+      <th>Birth year</th>
+      <th>Gender</th>
+      <th>Homeworls</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let planet of planets">
-      <th>{{planet.name}}</th>    
-      <th>{{planet.rotation_period}}</th>
-      <th>{{planet.orbital_period}}</th>
-      <th>{{planet.diameter}}</th>
-      <th>{{planet.climate}}</th>
-      <th>{{planet.gravity}}</th>
-      <th>{{planet.terrain}}</th>
-      <th>{{planet.surface_water}}</th>
-      <th>{{planet.population}}</th>
+    <tr *ngFor="let person of people">
+      <th>{{person.name}}</th>    
+      <th>{{person.height}}</th>
+      <th>{{person.mass}}</th>
+      <th>{{person.hair_color}}</th>
+      <th>{{person.skin_color}}</th>
+      <th>{{person.eye_color}}</th>
+      <th>{{person.birth_year}}</th>
+      <th>{{person.gender}}</th>
+      <th>{{person.homeworld}}</th>
       <th>
       <button type="button" class="btn btn-info">Edit</button>
     </th>

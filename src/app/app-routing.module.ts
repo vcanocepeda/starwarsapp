@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: './person/person.module#PersonModule'
   },
   {
-    path: 'planet',
+    path: 'planets',
     loadChildren: './planet/planet.module#PlanetModule'
   },
   {

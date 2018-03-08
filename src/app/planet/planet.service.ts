@@ -11,13 +11,24 @@ export class PlanetService {
   constructor(private http: HttpClient) { }
   /**
    *
-   * Method to call the endpoint and recover all the countris and its code.
+   * Method to call the endpoint and recover all the planets.
    *
    * @returns {Observable<Planet[]>}
    * @memberof PlanetService
    */
   public getPlanets$(): Observable<PlanetResponse> {
     return this.http.get<PlanetResponse>(this.swapiUrl + '/planets');
+  }
+
+  /**
+   *
+   * Method to call the endpoint and recover the detail of a specific planet.
+   *
+   * @returns {Observable<Planet[]>}
+   * @memberof PlanetService
+   */
+  public getPlanetDetail(id: String): Observable<Planet> {
+    return this.http.get<Planet>(this.swapiUrl + '/planets/' + id);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Local components
 import { PlanetService } from './planet.service';
@@ -18,7 +19,7 @@ export class PlanetComponent implements OnInit {
   cols: any[];
   public planets_error: any;
 
-  constructor(private planetService: PlanetService) { }
+  constructor(private _router: Router, private planetService: PlanetService) { }
 
   ngOnInit() {
     this.cols = [
@@ -30,17 +31,21 @@ export class PlanetComponent implements OnInit {
       {field: 'gravity', header: 'Gravity'},
       {field: 'terrain', header: 'Terrain'},
       {field: 'surface_water', header: 'Surface water'},
-      {field: 'population', header: 'Population'},
-      {field: 'residents', header: 'Residents'},
-      {field: 'films', header: 'Films'},
-      {field: 'created', header: 'Created'},
-      {field: 'edited', header: 'Edited'},
-      {field: 'url', header: 'Url'}
+      {field: 'population', header: 'Population'}
     ];
     this.planetService.getPlanets$().subscribe(
       data => { this.planets = data.results; },
       err => { this.planets_error = true; }
     );
+  }
+
+  goToDetail(url: String) {
+
+  // We have to trim the url
+  console.log('Id - ' + url);
+  //  console.log('Id - ' + rowData['url']);
+  //  this._router.navigate(rowData['url']);
+  //  this._router.navigate(['/planets/1']);
   }
 
 }
