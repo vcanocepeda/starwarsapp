@@ -26,6 +26,9 @@
             <td>
                 <button type="button" class="btn btn-info" (click)="goToDetail(rowData['url'])">Detail</button>
             </td>
+            <td>
+                <p-button label="Click" (onClick)="handleClick($event)"></p-button>
+            </td>
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">

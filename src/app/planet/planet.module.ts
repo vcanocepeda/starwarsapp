@@ -8,6 +8,7 @@ import { PlanetComponent } from './planet.component';
 import { PlanetDetailComponent } from './planet-detail/planet-detail.component';
 import { PlanetService } from './planet.service';
 
+import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 
 
@@ -15,6 +16,7 @@ import {TableModule} from 'primeng/table';
   imports: [
     CommonModule,
     PlanetRoutingModule,
+    ButtonModule,
     TableModule
   ],
   declarations: [PlanetComponent, PlanetDetailComponent],

@@ -7,6 +7,7 @@ import { Planet } from './planet.class';
 import { PlanetResponse} from './planetResponse.class';
 
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
 
 
 @Component({
@@ -43,9 +44,14 @@ export class PlanetComponent implements OnInit {
 
   // We have to trim the url
   console.log('Id - ' + url);
+    console.log ('Cortado - ' + url.split('/')[5]);
   //  console.log('Id - ' + rowData['url']);
   //  this._router.navigate(rowData['url']);
-  //  this._router.navigate(['/planets/1']);
+    this._router.navigate(['/planets/' + url.split('/')[5]]);
+  }
+
+  handleClick(e: any) {
+    console.log('Event - ' + e.target.value);
   }
 
 }
